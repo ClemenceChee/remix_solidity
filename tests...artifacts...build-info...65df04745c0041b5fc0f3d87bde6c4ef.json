@@ -1,0 +1,483 @@
+{
+	"id": "65df04745c0041b5fc0f3d87bde6c4ef",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.5.17",
+	"solcLongVersion": "0.5.17+commit.d19bba13",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"tests/StartStopUpdateExample.sol": {
+				"content": "pragma solidity ^0.5.13;\n\ncontract StartStopUpdateExample {\n    function sendMoney () public payable {\n\n    }\n\n    \n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"tests/StartStopUpdateExample.sol": {
+				"StartStopUpdateExample": {
+					"abi": [
+						{
+							"constant": false,
+							"inputs": [],
+							"name": "sendMoney",
+							"outputs": [],
+							"payable": true,
+							"stateMutability": "payable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"methods": {}
+					},
+					"evm": {
+						"assembly": "    /* \"tests/StartStopUpdateExample.sol\":26:117  contract StartStopUpdateExample {... */\n  mstore(0x40, 0x80)\n  callvalue\n    /* \"--CODEGEN--\":8:17   */\n  dup1\n    /* \"--CODEGEN--\":5:7   */\n  iszero\n  tag_1\n  jumpi\n    /* \"--CODEGEN--\":30:31   */\n  0x00\n    /* \"--CODEGEN--\":27:28   */\n  dup1\n    /* \"--CODEGEN--\":20:32   */\n  revert\n    /* \"--CODEGEN--\":5:7   */\ntag_1:\n    /* \"tests/StartStopUpdateExample.sol\":26:117  contract StartStopUpdateExample {... */\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"tests/StartStopUpdateExample.sol\":26:117  contract StartStopUpdateExample {... */\n      mstore(0x40, 0x80)\n      jumpi(tag_1, lt(calldatasize, 0x04))\n      shr(0xe0, calldataload(0x00))\n      dup1\n      0xcbedbf5a\n      eq\n      tag_2\n      jumpi\n    tag_1:\n      0x00\n      dup1\n      revert\n        /* \"tests/StartStopUpdateExample.sol\":64:109  function sendMoney () public payable {... */\n    tag_2:\n      tag_3\n      tag_4\n      jump\t// in\n    tag_3:\n      stop\n    tag_4:\n      jump\t// out\n\n    auxdata: 0xa265627a7a72315820bcd6d3e1212be01e697fbf26dad07d9e1b455e18811a85156e8a806e2c9b711b64736f6c63430005110032\n}\n",
+						"bytecode": {
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50606080601d6000396000f3fe608060405260043610601c5760003560e01c8063cbedbf5a146021575b600080fd5b60276029565b005b56fea265627a7a72315820bcd6d3e1212be01e697fbf26dad07d9e1b455e18811a85156e8a806e2c9b711b64736f6c63430005110032",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x60 DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH1 0x1C JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0xCBEDBF5A EQ PUSH1 0x21 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x27 PUSH1 0x29 JUMP JUMPDEST STOP JUMPDEST JUMP INVALID LOG2 PUSH6 0x627A7A723158 KECCAK256 0xBC 0xD6 0xD3 0xE1 0x21 0x2B 0xE0 0x1E PUSH10 0x7FBF26DAD07D9E1B455E XOR DUP2 BYTE DUP6 ISZERO PUSH15 0x8A806E2C9B711B64736F6C63430005 GT STOP ORIGIN ",
+							"sourceMap": "26:91:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:91:0;;;;;;;"
+						},
+						"deployedBytecode": {
+							"linkReferences": {},
+							"object": "608060405260043610601c5760003560e01c8063cbedbf5a146021575b600080fd5b60276029565b005b56fea265627a7a72315820bcd6d3e1212be01e697fbf26dad07d9e1b455e18811a85156e8a806e2c9b711b64736f6c63430005110032",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH1 0x1C JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0xCBEDBF5A EQ PUSH1 0x21 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x27 PUSH1 0x29 JUMP JUMPDEST STOP JUMPDEST JUMP INVALID LOG2 PUSH6 0x627A7A723158 KECCAK256 0xBC 0xD6 0xD3 0xE1 0x21 0x2B 0xE0 0x1E PUSH10 0x7FBF26DAD07D9E1B455E XOR DUP2 BYTE DUP6 ISZERO PUSH15 0x8A806E2C9B711B64736F6C63430005 GT STOP ORIGIN ",
+							"sourceMap": "26:91:0:-;;;;;;;;;;;;;;;;;;;;;64:45;;;:::i;:::-;;;:::o"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "19200",
+								"executionCost": "69",
+								"totalCost": "19269"
+							},
+							"external": {
+								"sendMoney()": "98"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 26,
+									"end": 117,
+									"name": "PUSH",
+									"value": "80"
+								},
+								{
+									"begin": 26,
+									"end": 117,
+									"name": "PUSH",
+									"value": "40"
+								},
+								{
+									"begin": 26,
+									"end": 117,
+									"name": "MSTORE"
+								},
+								{
+									"begin": 26,
+									"end": 117,
+									"name": "CALLVALUE"
+								},
+								{
+									"begin": 8,
+									"end": 17,
+									"name": "DUP1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "ISZERO"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "PUSH [tag]",
+									"value": "1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "JUMPI"
+								},
+								{
+									"begin": 30,
+									"end": 31,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 27,
+									"end": 28,
+									"name": "DUP1"
+								},
+								{
+									"begin": 20,
+									"end": 32,
+									"name": "REVERT"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "tag",
+									"value": "1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "JUMPDEST"
+								},
+								{
+									"begin": 26,
+									"end": 117,
+									"name": "POP"
+								},
+								{
+									"begin": 26,
+									"end": 117,
+									"name": "PUSH #[$]",
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 26,
+									"end": 117,
+									"name": "DUP1"
+								},
+								{
+									"begin": 26,
+									"end": 117,
+									"name": "PUSH [$]",
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 26,
+									"end": 117,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 26,
+									"end": 117,
+									"name": "CODECOPY"
+								},
+								{
+									"begin": 26,
+									"end": 117,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 26,
+									"end": 117,
+									"name": "RETURN"
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a265627a7a72315820bcd6d3e1212be01e697fbf26dad07d9e1b455e18811a85156e8a806e2c9b711b64736f6c63430005110032",
+									".code": [
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "PUSH",
+											"value": "80"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "PUSH",
+											"value": "40"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "MSTORE"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "PUSH",
+											"value": "4"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "CALLDATASIZE"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "LT"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "PUSH [tag]",
+											"value": "1"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "JUMPI"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "PUSH",
+											"value": "0"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "CALLDATALOAD"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "PUSH",
+											"value": "E0"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "SHR"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "DUP1"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "PUSH",
+											"value": "CBEDBF5A"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "EQ"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "PUSH [tag]",
+											"value": "2"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "JUMPI"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "tag",
+											"value": "1"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "JUMPDEST"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "PUSH",
+											"value": "0"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "DUP1"
+										},
+										{
+											"begin": 26,
+											"end": 117,
+											"name": "REVERT"
+										},
+										{
+											"begin": 64,
+											"end": 109,
+											"name": "tag",
+											"value": "2"
+										},
+										{
+											"begin": 64,
+											"end": 109,
+											"name": "JUMPDEST"
+										},
+										{
+											"begin": 64,
+											"end": 109,
+											"name": "PUSH [tag]",
+											"value": "3"
+										},
+										{
+											"begin": 64,
+											"end": 109,
+											"name": "PUSH [tag]",
+											"value": "4"
+										},
+										{
+											"begin": 64,
+											"end": 109,
+											"name": "JUMP",
+											"value": "[in]"
+										},
+										{
+											"begin": 64,
+											"end": 109,
+											"name": "tag",
+											"value": "3"
+										},
+										{
+											"begin": 64,
+											"end": 109,
+											"name": "JUMPDEST"
+										},
+										{
+											"begin": 64,
+											"end": 109,
+											"name": "STOP"
+										},
+										{
+											"begin": 64,
+											"end": 109,
+											"name": "tag",
+											"value": "4"
+										},
+										{
+											"begin": 64,
+											"end": 109,
+											"name": "JUMPDEST"
+										},
+										{
+											"begin": 64,
+											"end": 109,
+											"name": "JUMP",
+											"value": "[out]"
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {
+							"sendMoney()": "cbedbf5a"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"sendMoney\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"tests/StartStopUpdateExample.sol\":\"StartStopUpdateExample\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"tests/StartStopUpdateExample.sol\":{\"keccak256\":\"0xdb478c17fbd0b4632a04f89078cbe7a7ae5ed131f5594e2b795220897bb8e3d4\",\"urls\":[\"bzz-raw://39b7f7d4d898c68fef4526cf9eaa86d76f0df1c9d753aa88e9296873a7ca28e8\",\"dweb:/ipfs/QmZJ4ZNbJvV1DUTSKgSBEEgnnjeCJ1cW64wmV67divMjwY\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"methods": {}
+					}
+				}
+			}
+		},
+		"sources": {
+			"tests/StartStopUpdateExample.sol": {
+				"ast": {
+					"absolutePath": "tests/StartStopUpdateExample.sol",
+					"exportedSymbols": {
+						"StartStopUpdateExample": [
+							6
+						]
+					},
+					"id": 7,
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.5",
+								".13"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "0:24:0"
+						},
+						{
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"documentation": null,
+							"fullyImplemented": true,
+							"id": 6,
+							"linearizedBaseContracts": [
+								6
+							],
+							"name": "StartStopUpdateExample",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"body": {
+										"id": 4,
+										"nodeType": "Block",
+										"src": "101:8:0",
+										"statements": []
+									},
+									"documentation": null,
+									"id": 5,
+									"implemented": true,
+									"kind": "function",
+									"modifiers": [],
+									"name": "sendMoney",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 2,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "83:2:0"
+									},
+									"returnParameters": {
+										"id": 3,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "101:0:0"
+									},
+									"scope": 6,
+									"src": "64:45:0",
+									"stateMutability": "payable",
+									"superFunction": null,
+									"visibility": "public"
+								}
+							],
+							"scope": 7,
+							"src": "26:91:0"
+						}
+					],
+					"src": "0:117:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
